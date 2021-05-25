@@ -25,13 +25,20 @@ int bone = myObj.nextInt();
 int btwo = myObj.nextInt();
 
 double length1 = Math.sqrt(Math.pow((atwo - aone), 2 ) + Math.pow((btwo - bone) , 2));
-System.out.println(" the length of the line is " + length);
+System.out.println(" the length of the line is " + length1);
 
 if (length == length1)
 {
 	System.out.println(" the length of both lines is equal  " + length  + length1);
 }
-
+else if ( length < length1)
+{
+System.out.println(" the length of first line is less than the length of the second line  " + length  + length1);
+}
+else 
+{
+	System.out.println(" the length of the first line is greater  " + length  + length1);
+}
 }
 
 }
