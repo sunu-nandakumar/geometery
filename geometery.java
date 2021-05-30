@@ -1,8 +1,36 @@
 import java.util.Scanner;
 
+import java.lang.*;
 
 public class geometery
 {
+public static double compareMethod(double length , double length1)
+{
+double compare = Double.compare(length , length1);
+
+if ( compare > 0 )
+{
+ double sub = ( length - length1);
+	
+	System.out.println(length + " is greater than " +length1 + sub );
+return sub;
+
+}
+else if ( compare < 0 )
+{
+double sub = (length1 - length );
+ System.out.println( + length1 + " is greater than " + length + sub);
+return sub;
+}
+else 
+{
+	double sub = ( length - length1);
+
+	 System.out.println(" both are equal  " + length  + length1+ sub );
+return sub;
+
+}
+} 
 public static void main(String args[])
 {
 Scanner myObj = new Scanner(System.in);
@@ -25,20 +53,15 @@ int bone = myObj.nextInt();
 int btwo = myObj.nextInt();
 
 double length1 = Math.sqrt(Math.pow((atwo - aone), 2 ) + Math.pow((btwo - bone) , 2));
+
 System.out.println(" the length of the line is " + length1);
 
-if (length == length1)
-{
-	System.out.println(" the length of both lines is equal  " + length  + length1);
-}
-else if ( length < length1)
-{
-System.out.println(" the length of first line is less than the length of the second line  " + length  + length1);
-}
-else 
-{
-	System.out.println(" the length of the first line is greater  " + length  + length1);
-}
+
+compareMethod(length , length1);
+
+
+
+
 }
 
 }
